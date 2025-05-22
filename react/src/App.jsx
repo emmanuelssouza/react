@@ -1,14 +1,12 @@
-import { useState } from 'react';
+
+import './App.css'
+import Coisa from './components/coisa'
 
 function App(){
-  const [menssage, setMenssage] = useState('Hello World');
-  return(
-    <div>
-      <h1>{menssage}</h1>
-      <button onClick={
-        () => setMenssage('Olá Mundo')
-      }
-        >mudar texto</button>
+  return (
+    <div id="container">
+      <h1>app</h1>
+        <Coisa />
     </div>
   );
 }
