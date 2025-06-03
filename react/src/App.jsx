@@ -1,26 +1,21 @@
 
 import './App.css'
 import Coisa from './components/coisa'
-import { useState } from 'react';
+import SeyMN from './components/seyMyName'
+import { useState } from 'react'
 
 function App(){
-  const [a, setA] = useState(0);
-  const [b, setB] = useState(0);
-  function sum(a, b){
-    return Number(a) + Number(b);
-  }
+  const [nome, setNome] = useState('myName')
   return (
     <div id="container">
-      <h1>app</h1>
-      <p>a soma de 
-        <input type="number" name="num1" id="num1" onChange={(e) => setA(e.target.value)}
-      />
-       e 
-       <input type="number" name="num2" id="num2" onChange={(e) => setB(e.target.value)}
-      />
-        é: {sum(a, b)}
-      </p>
+      <h1 class='bg-red-300 text-blue-500'>app</h1>
         <Coisa />
+        <input type="text" name="ntxt" id="ntxt" 
+        value = {nome}
+        onChange={(e) => setNome(e.target.value)}
+        
+        />
+        <SeyMN name={nome}/>
     </div>
   );
 }
